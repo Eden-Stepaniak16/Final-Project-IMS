@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- load all project css files - DO NOT CHANGE -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home/style.css">
+  <link rel="stylesheet" href="project1/style.css">
+  <link rel="stylesheet" href="project2/style.css">
+  <link rel="stylesheet" href="project3/style.css">
+
+  <!-- load all project js files  - DO NOT CHANGE -->
+  <script src="project1/script.js"></script>
+  <script src="project2/script.js"></script>
+  <script src="project3/script.js"></script>
+
+  <script src="https://unpkg.com/htmx.org@2.0.3"></script>
+  <script src=".instructor/handleFormData.js"></script>
+  <script src="script.js" defer></script>
+  <title>Project Gallery</title>
+</head>
+
+<body id="body-load" hx-get="home/index.html" hx-trigger="load" hx-target="main" hx-swap="innerHTML">
+
+  <!-- The only thing that should be changed in this HTML file
+   is the text of the links in the nav bar. You may add some additional
+   elements (e.g. divs or lists) withinin the nav for layout purposes. -->
+
+  <nav hx-swap="innerHTML swap:0.5s settle:0.5s">
+    <button hx-get="home/index.html" hx-trigger="click" id="home-load">Home</button>
+    <button hx-get="project1/index.html" hx-trigger="click" id="project1-load">First Project</button>
+    <button hx-get="project2/index.html" hx-trigger="click" id="project2-load">Second Project</button>
+    <button hx-get="project3/index.html" hx-trigger="click" id="project3-load">Third Project</button>
+  </nav>
+
+  <main id="poop"></main>
+
+</body>
+
+</html>
+
+<!-- DO NOT CHANGE ANY OF THE EXISTING ATTRIBUTES ON THE ELEMENTS ABOVE -->

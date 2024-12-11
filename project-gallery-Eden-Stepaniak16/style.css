@@ -1,0 +1,38 @@
+/* YOU SHOULD ONLY ADDRESS NAV BAR STYLING AND PAGE TRANSITIONS IN THIS CSS FILE */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1100px;
+  margin: auto;
+}
+
+p {
+  max-width: 80ch;
+}
+
+img {
+  width: 100%;
+}
+
+/* PAGE TRANSITIONS */
+/* If you change the timing of the transitions, make sure to update
+the swap and settle values on the body in the main index.html file as well. */
+
+.htmx-swapping {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.htmx-settling {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+@media (max-width: 800px) {
+}
+
+@media (max-width: 480px) {
+}
